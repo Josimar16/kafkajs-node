@@ -11,12 +11,13 @@ const run = async () => {
   await producer.connect();
 
   await producer.send({
-    topic: "APP_NEW_TOPIC",
-    messages: [
-      { value: "Hello world!" },
-      { value: "First TOPIC created!" },
-      { value: "Second TOPIC created!" },
-    ],
+    topic: "APP_FIRST_TOPIC",
+    messages: [{ value: "First TOPIC created!" }],
+  });
+
+  await producer.send({
+    topic: "APP_SECOND_TOPIC",
+    messages: [{ value: "Second TOPIC created!" }],
   });
 };
 

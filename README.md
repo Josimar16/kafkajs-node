@@ -14,7 +14,13 @@ bin/kafka-server-start.sh config/server.properties
 ```
 **_Rodando o servidor node_**
 ```bash
-node src/index.js
+node src/consumer_first.js
+```
+```bash
+node src/consumer_second.js
+```
+```bash
+node src/producer.js
 ```
 **_Produzindo as mensagens para o servidor node_**
 ```bash
